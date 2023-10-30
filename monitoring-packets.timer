@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer to run rrd-monitoring-packets.service
+
+[Timer]
+Unit=monitoring-packets.service
+OnUnitActiveSec=1min
+Persistent=True
+
+[Install]
+WantedBy=timers.target

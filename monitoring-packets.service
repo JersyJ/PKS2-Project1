@@ -1,0 +1,11 @@
+[Unit]
+Description=Run script to collect number of packets received
+
+[Service]
+Type=oneshot
+ExecStart=/var/lib/rrdtool/script.sh
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

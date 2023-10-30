@@ -1,0 +1,31 @@
+site_name: PKS2 - Project 1
+site_author: Dominik Lichnovský
+site_description: Project 1 and documentation of it
+
+# Repository 
+repo_name: PKS2-Project1
+repo_url: https://github.com/JersyJ/PKS2-Project1
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.tabs
+
+plugins:
+  - search
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - footnotes
+  - meta
+  - md_in_html
+  - tables
+
+nav:
+  - General: index.md
+  - Help: help.md
+
