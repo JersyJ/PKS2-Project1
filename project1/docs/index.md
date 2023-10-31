@@ -1,6 +1,5 @@
 # Welcome to PKS-Project2
 
-
 ## Assignment
 
 * Using the RRDTool tool to render status and network information into graphs. 
@@ -11,7 +10,7 @@
 
 ## Project layout
 
-    mkdocs.yml    # The configuration file.
+    mkdocs.yml                      # The configuration file.
     project1/
         index.md                    # Homepage.
         incoming_packets.md         # Graphs of incoming packets.
@@ -22,3 +21,8 @@
             ingest_script.md        # Documentation for creating a script.
             setup_timer.md          # Documentation for setting up a timer.
             setup_nginx.md          # Documentation for setting up Nginx.
+    monitoring-packets.service      # Systemd service file
+    monitoring-packets.timer        # Systemd timer file
+    script.sh                       # Ingest script
+    requirements.txt                # Python Requirements for Mkdocs
+    notes.sh                        # Notes

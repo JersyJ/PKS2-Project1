@@ -8,6 +8,7 @@ progress_values=( $((values_array[0]-last_values_total[0])) $((values_array[1]-l
 rrdtool update /var/lib/rrdtool/packets_in_total.rrd N:${values_array[0]}:${values_array[1]}:${values_array[2]}:${values_array[3]}
 rrdtool update /var/lib/rrdtool/packets.rrd N:${progress_values[0]}:${progress_values[1]}:${progress_values[2]}:${progress_values[3]}
 
+#Progress
 #Hourly
 rrdtool graph /var/www/html/assets/images/hourly_incoming_packets.png --start -3600 -a PNG --lower-limit 0 \
 -t "Hourly Incoming packets" --vertical-label "Number of incoming packets" -w 700 -h 300 \
@@ -35,21 +36,21 @@ DEF:packets_i4=/var/lib/rrdtool/packets.rrd:packets_i4:LAST LINE2:packets_i4#ffe
 #Hourly
 rrdtool graph /var/www/html/assets/images/total_hourly_incoming_packets.png --start -3600 -a PNG --lower-limit 0 \
 -t "Total number of incoming packets in hour" --vertical-label "Total number of incoming packets" -w 700 -h 300 \
-DEF:packets_i1=/var/lib/rrdtool/packets_in_total.rrd:packets_i1:LAST LINE2:packets_i1#ff0000:"lo" \
-DEF:packets_i2=/var/lib/rrdtool/packets_in_total.rrd:packets_i2:LAST LINE2:packets_i2#55ff00:"ens160" \
-DEF:packets_i3=/var/lib/rrdtool/packets_in_total.rrd:packets_i3:LAST LINE2:packets_i3#0059ff:"ens192" \
-DEF:packets_i4=/var/lib/rrdtool/packets_in_total.rrd:packets_i4:LAST LINE2:packets_i4#ffe100:"ens224"
+DEF:packets_in_total_i1=/var/lib/rrdtool/packets_in_total.rrd:packets_in_total_i1:LAST LINE2:packets_in_total_i1#ff0000:"lo" \
+DEF:packets_in_total_i2=/var/lib/rrdtool/packets_in_total.rrd:packets_in_total_i2:LAST LINE2:packets_in_total_i2#55ff00:"ens160" \
+DEF:packets_in_total_i3=/var/lib/rrdtool/packets_in_total.rrd:packets_in_total_i3:LAST LINE2:packets_in_total_i3#0059ff:"ens192" \
+DEF:packets_in_total_i4=/var/lib/rrdtool/packets_in_total.rrd:packets_in_total_i4:LAST LINE2:packets_in_total_i4#ffe100:"ens224"
 #Daily
 rrdtool graph /var/www/html/assets/images/total_daily_incoming_packets.png --start -1d -a PNG --lower-limit 0 \
 -t "Total number of incoming packets in day" --vertical-label "Total number of incoming packets" -w 700 -h 300 \
-DEF:packets_i1=/var/lib/rrdtool/packets_in_total.rrd:packets_i1:LAST LINE2:packets_i1#ff0000:"lo" \
-DEF:packets_i2=/var/lib/rrdtool/packets_in_total.rrd:packets_i2:LAST LINE2:packets_i2#55ff00:"ens160" \
-DEF:packets_i3=/var/lib/rrdtool/packets_in_total.rrd:packets_i3:LAST LINE2:packets_i3#0059ff:"ens192" \
-DEF:packets_i4=/var/lib/rrdtool/packets_in_total.rrd:packets_i4:LAST LINE2:packets_i4#ffe100:"ens224"
+DEF:packets_in_total_i1=/var/lib/rrdtool/packets_in_total.rrd:packets_in_total_i1:LAST LINE2:packets_in_total_i1#ff0000:"lo" \
+DEF:packets_in_total_i2=/var/lib/rrdtool/packets_in_total.rrd:packets_in_total_i2:LAST LINE2:packets_in_total_i2#55ff00:"ens160" \
+DEF:packets_in_total_i3=/var/lib/rrdtool/packets_in_total.rrd:packets_in_total_i3:LAST LINE2:packets_in_total_i3#0059ff:"ens192" \
+DEF:packets_in_total_i4=/var/lib/rrdtool/packets_in_total.rrd:packets_in_total_i4:LAST LINE2:packets_in_total_i4#ffe100:"ens224"
 #Weekly
 rrdtool graph /var/www/html/assets/images/total_weekly_incoming_packets.png --start -1w -a PNG --lower-limit 0 \
 -t "Total number of incoming packets in week" --vertical-label "Total number of incoming packets" -w 700 -h 300 \
-DEF:packets_i1=/var/lib/rrdtool/packets_in_total.rrd:packets_i1:LAST LINE2:packets_i1#ff0000:"lo" \
-DEF:packets_i2=/var/lib/rrdtool/packets_in_total.rrd:packets_i2:LAST LINE2:packets_i2#55ff00:"ens160" \
-DEF:packets_i3=/var/lib/rrdtool/packets_in_total.rrd:packets_i3:LAST LINE2:packets_i3#0059ff:"ens192" \
-DEF:packets_i4=/var/lib/rrdtool/packets_in_total.rrd:packets_i4:LAST LINE2:packets_i4#ffe100:"ens224"
+DEF:packets_in_total_i1=/var/lib/rrdtool/packets_in_total.rrd:packets_in_total_i1:LAST LINE2:packets_in_total_i1#ff0000:"lo" \
+DEF:packets_in_total_i2=/var/lib/rrdtool/packets_in_total.rrd:packets_in_total_i2:LAST LINE2:packets_in_total_i2#55ff00:"ens160" \
+DEF:packets_in_total_i3=/var/lib/rrdtool/packets_in_total.rrd:packets_in_total_i3:LAST LINE2:packets_in_total_i3#0059ff:"ens192" \
+DEF:packets_in_total_i4=/var/lib/rrdtool/packets_in_total.rrd:packets_in_total_i4:LAST LINE2:packets_in_total_i4#ffe100:"ens224"
