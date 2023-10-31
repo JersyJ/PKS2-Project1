@@ -12,6 +12,31 @@ theme:
   features:
     - navigation.sections
     - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - navigation.expand
+    
+    - search.highlight
+    - search.share
+    - search.suggest
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: logo
 
 plugins:
   - search
@@ -27,5 +52,11 @@ markdown_extensions:
 
 nav:
   - General: index.md
-  - Help: help.md
-
+  - Incoming packets: incoming_packets.md
+  - Total incomed packets: incoming_packets_total.md
+  - Developer documentation:
+    - SNMP setup: dev/setup_snmp.md
+    - Create RR Database:  dev/create_rr_database.md
+    - Ingest Script:  dev/ingest_script.md
+    - Timer setup:   dev/setup_timer.md
+    - Nginx setup:  dev/setup_nginx.md
